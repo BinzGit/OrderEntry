@@ -1,0 +1,26 @@
+<div class="row">
+     <div *ngIf="company" class="col-md-3">
+    <div class="panel panel-primary">       
+            <div class="panel-heading">   
+                Name: {{company.companyName}}
+            </div>
+            <div class="panel-body">
+                <div class="clearfix"></div>
+                    Address: {{company.address1}}
+                <div class="clearfix"></div>
+                City: {{company.cityName}}
+                <div class="clearfix"></div>
+                State: {{company.state}}
+                <div class="clearfix"></div>
+                Zip: {{company.zip}}
+                <div class="clearfix"></div>
+                BillTo: <span *ngIf="company.isBillTo">Yes</span><span *ngIf="!company.isBillTo">No</span>
+                <div class="clearfix"></div>   
+                Shipper: <span *ngIf="company.isShipper">Yes</span><span *ngIf="!company.isShipper">No</span>
+                <div class="clearfix"></div> 
+                Consignee: <span *ngIf="company.isConsignee">Yes</span><span *ngIf="!company.isConsignee">No</span>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
