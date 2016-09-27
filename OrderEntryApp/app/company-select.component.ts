@@ -56,6 +56,7 @@ billTo : CompanyType = CompanyType.BillTo;
   }
 
   gotoOrders(): void {
+    this.selectedCompanyId = (this.selectCompanyForm.value as formValue).companyID;
     let link = ['/company', this.selectedCompanyId, 'orders'];
     this.router.navigate(link);
   }

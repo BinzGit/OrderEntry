@@ -69,6 +69,7 @@ System.register(['@angular/core', './company', './company.service', '@angular/ro
                     this.router.navigate(link);
                 };
                 CompanySelectComponent.prototype.gotoOrders = function () {
+                    this.selectedCompanyId = this.selectCompanyForm.value.companyID;
                     var link = ['/company', this.selectedCompanyId, 'orders'];
                     this.router.navigate(link);
                 };
